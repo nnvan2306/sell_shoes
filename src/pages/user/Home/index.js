@@ -208,24 +208,6 @@ function Home() {
                 </div>
             </div>
             {/* Banner */}
-            {/* <div>
-                <Carousel
-                    itemClass={cx("carousel-item")}
-                    swipeable={true}
-                    draggable={false}
-                    responsive={responsiveBanner}
-                    autoPlay
-                    arrows={withWindow >= 1024 ? true : false}
-                    ssr={true}
-                    infinite={true}
-                    autoPlaySpeed={3000}
-                    transitionDuration={500}
-                >
-                    {linkImagesSlider.map((item, index) => {
-                        return <img key={index} src={item} alt="img" />;
-                    })}
-                </Carousel>
-            </div> */}
 
             <div className={cx("banner-wrapper")}>
                 <div className={cx("banner-container")}>

@@ -151,7 +151,7 @@ function ItemCollection({ product, handleToCart }) {
                         )}
                     </span>
                     {product?.discountPerc === 0 ? null : (
-                        <>
+                        <span style={{ display: "flex", gap: "10px" }}>
                             <span className={cx("sale-off")}>
                                 {new Intl.NumberFormat("vi-VN", {
                                     style: "currency",
@@ -161,7 +161,7 @@ function ItemCollection({ product, handleToCart }) {
                             <span className={cx("percent")}>
                                 -{product?.discountPerc}%
                             </span>
-                        </>
+                        </span>
                     )}
                 </div>
             </div>
