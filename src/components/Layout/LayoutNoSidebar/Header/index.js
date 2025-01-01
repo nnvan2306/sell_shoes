@@ -1,7 +1,7 @@
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import styles from "./Header.module.scss";
 import classNames from "classnames/bind";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { IoSearch, IoBagHandle, IoClose } from "react-icons/io5";
 import { IoMdClose } from "react-icons/io";
 import DetailPopup from "./DetailPopup";
@@ -13,8 +13,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { BiAlignLeft } from "react-icons/bi";
 import { FaUserCircle } from "react-icons/fa";
 import CartPopup from "./CartPopup";
-import { getCartProducts } from "~/redux/api/userRequest";
-import { toast } from "react-toastify";
 
 const cx = classNames.bind(styles);
 
@@ -281,6 +279,9 @@ function Header() {
                         style={{ cursor: "pointer" }}
                         onMouseMove={() => {
                             setShowCartPopup(true);
+                        }}
+                        onMouseLeave={() => {
+                            setShowCartPopup(false);
                         }}
                     >
                         <IoBagHandle
