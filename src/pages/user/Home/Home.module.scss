@@ -36,6 +36,35 @@
     background-color: #231D20;
 }
 
+.banner-wrapper {
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    width          : 100%;
+}
+
+.banner-container {
+    width: 100%;
+}
+
+.carousel-item {
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+}
+
+.carousel-image-wrapper {
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    width          : 100%;
+}
+
+.carousel-image-wrapper img {
+    max-width: 100%;
+    height   : auto;
+}
+
 
 @media only screen and (max-width: 767px) {
     .container-slider {
@@ -106,6 +135,8 @@
             }
         }
     }
+
+
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {

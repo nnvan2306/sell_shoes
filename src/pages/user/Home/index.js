@@ -46,7 +46,6 @@ function Home() {
     let currentUser = useSelector((state) => state.auth.login.currentUser);
 
     const [selected, setSelected] = useState(null);
-    const [products, setProducts] = useState([]);
     const [popupProductCart, setPopupProductCart] = useState(false);
     const notify = (type, message) => toast(message, { type: type });
 
@@ -168,9 +167,8 @@ function Home() {
     }, []);
     useEffect(() => {
         const fetch = async () => {
-            const res = await getAllProducts();
+            await getAllProducts();
             currentUser && getCartProducts(currentUser, dispatch);
-            setProducts(res);
         };
 
         fetch();
@@ -210,7 +208,7 @@ function Home() {
                 </div>
             </div>
             {/* Banner */}
-            <div>
+            {/* <div>
                 <Carousel
                     itemClass={cx("carousel-item")}
                     swipeable={true}
@@ -227,6 +225,32 @@ function Home() {
                         return <img key={index} src={item} alt="img" />;
                     })}
                 </Carousel>
+            </div> */}
+
+            <div className={cx("banner-wrapper")}>
+                <div className={cx("banner-container")}>
+                    <Carousel
+                        itemClass={cx("carousel-item")}
+                        swipeable={true}
+                        draggable={false}
+                        responsive={responsiveBanner}
+                        autoPlay
+                        arrows={withWindow >= 1024}
+                        ssr={true}
+                        infinite={true}
+                        autoPlaySpeed={3000}
+                        transitionDuration={500}
+                    >
+                        {linkImagesSlider.map((item, index) => (
+                            <div
+                                key={index}
+                                className={cx("carousel-image-wrapper")}
+                            >
+                                <img src={item} alt={`Slide ${index}`} />
+                            </div>
+                        ))}
+                    </Carousel>
+                </div>
             </div>
 
             {/* List product */}
