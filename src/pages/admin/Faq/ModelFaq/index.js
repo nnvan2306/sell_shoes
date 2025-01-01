@@ -141,6 +141,7 @@ const ModelFaq = ({ typeModelFaq, onClose, data }) => {
                         <textarea
                             type="text"
                             style={{
+                                minHeight: "100px",
                                 marginTop: "12px",
                                 border: "1px solid #ccc",
                                 borderRadius: "10px",
@@ -162,6 +163,7 @@ const ModelFaq = ({ typeModelFaq, onClose, data }) => {
                         <textarea
                             type="text"
                             style={{
+                                minHeight: "100px",
                                 marginTop: "12px",
                                 border: "1px solid #ccc",
                                 borderRadius: "10px",

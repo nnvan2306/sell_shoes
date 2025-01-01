@@ -126,7 +126,10 @@ const FaqPage = () => {
                                         Question
                                     </th>
                                     <th className={cx("col-tbl")}>Answer</th>
-                                    <th className={cx("col-tbl col-action")}>
+                                    <th
+                                        className={cx("col-tbl col-action")}
+                                        style={{ textAlign: "center" }}
+                                    >
                                         Tác vụ
                                     </th>
                                 </tr>
@@ -155,10 +158,16 @@ const FaqPage = () => {
                                                       <div
                                                           style={{
                                                               display: "flex",
+                                                              justifyContent:
+                                                                  "center",
+                                                              gap: "10px",
                                                           }}
                                                       >
                                                           <button
                                                               style={{
+                                                                  border: "1px solid #ccc",
+                                                                  borderRadius:
+                                                                      "8px",
                                                                   marginRight:
                                                                       "4px",
                                                               }}
@@ -176,6 +185,9 @@ const FaqPage = () => {
                                                           </button>
                                                           <button
                                                               style={{
+                                                                  border: "1px solid #ccc",
+                                                                  borderRadius:
+                                                                      "8px",
                                                                   marginRight:
                                                                       "4px",
                                                               }}
@@ -192,6 +204,11 @@ const FaqPage = () => {
                                                               />
                                                           </button>
                                                           <button
+                                                              style={{
+                                                                  border: "1px solid #ccc",
+                                                                  borderRadius:
+                                                                      "8px",
+                                                              }}
                                                               onClick={() =>
                                                                   handleOpenModel(
                                                                       "DELETE",
