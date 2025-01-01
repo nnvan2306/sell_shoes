@@ -29,16 +29,13 @@ import {
     increaseQuantityCartItemNonUser,
 } from "~/redux/api/nonUserRequest";
 import { contents, navPages } from "~/constants/products";
-import { getProducts } from "../api/get-products";
+import { getProducts } from "../../../api/product/get-products";
+import { linkImagesSlider } from "~/constants";
 
 const cx = classNames.bind(styles);
 
 function Home() {
     const [withWindow, setWithWindow] = useState(window.innerWidth);
-    const linkImagesSlider = [
-        "https://www.watchstore.vn/images/products/collection/slideshow/2024/05/31/compress/nam2-1_1717152208.webp",
-        "https://www.watchstore.vn/images/products/collection/slideshow/2024/05/31/compress/banner-dong-ho-nam-1_1717152166.webp",
-    ];
 
     const navigate = useNavigate();
     const listProducts = useSelector((state) => state.product.listProducts);
@@ -179,14 +176,6 @@ function Home() {
         fetch();
     }, []);
 
-    const [fakeData, setFakeData] = useState([]);
-
-    useEffect(() => {
-        if (products.length > 0) {
-            setFakeData(Array.from({ length: 10 }, () => products[0]));
-        }
-    }, [products]);
-
     return (
         <div>
             <ToastContainer />
@@ -241,40 +230,7 @@ function Home() {
             </div>
 
             {/* List product */}
-            <div className={cx("container-slider")}>
-                <span className={cx("title-slider")}>Tất cả sản phẩm</span>
-                {products.length > 0
-                    ? products.map((item) => {
-                          return (
-                              <Carousel
-                                  itemClass={cx("carousel-item")}
-                                  swipeable={true}
-                                  draggable={false}
-                                  arrows={withWindow >= 1024 ? true : false}
-                                  responsive={responsive}
-                                  ssr={true}
-                                  index={item?.id}
-                              >
-                                  {fakeData.map((item, index) => {
-                                      return (
-                                          <div
-                                              key={index}
-                                              className={cx("width-item")}
-                                          >
-                                              <ItemCollection
-                                                  handleToCart={
-                                                      handleItemToCart
-                                                  }
-                                                  product={item}
-                                              />
-                                          </div>
-                                      );
-                                  })}
-                              </Carousel>
-                          );
-                      })
-                    : null}
-            </div>
+
             {contents.map((item) => {
                 return (
                     <>

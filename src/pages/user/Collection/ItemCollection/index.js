@@ -40,14 +40,14 @@ function ItemCollection({ product, handleToCart }) {
             onClick={() => (window.location.href = `/product/${product._id}`)}
         >
             <div className={cx("image-wrapper")}>
-                {/* <img
+                <img
                     className={cx("image-1")}
                     src={product?.colors[indexColorActive]?.images[0]}
                 />
                 <img
                     className={cx("image-2")}
                     src={product?.colors[indexColorActive]?.images[1]}
-                /> */}
+                />
                 <div className={cx("section-size")}>
                     <div className={cx("title-size")}>
                         Thêm nhanh vào giỏ hàng

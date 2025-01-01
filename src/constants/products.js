@@ -37,4 +37,9 @@ export const contents = [
         titleSlider: "SẢN PHẨM THỂ THAO",
         urlBanner: "https://mcdn.coolmate.me/image/March2023/mceclip0_137.jpg",
     },
+    {
+        titleSlider: "Tất cả sản phẩm",
+        urlBanner:
+            "https://image.donghohaitrieu.com/wp-content/uploads/2023/10/bst-dong-ho-moi.jpg",
+    },
 ];

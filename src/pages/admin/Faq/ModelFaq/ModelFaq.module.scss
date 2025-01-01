@@ -89,3 +89,21 @@
     width        : 100%;
     padding-left : 70px;
 }
+
+.form-common {
+    width: 40%;
+
+    label {
+        font-weight: 600;
+        width      : 40%;
+    }
+
+    input {
+        outline      : none;
+        border       : none;
+        border-bottom: 1px solid #ccc;
+        padding      : 8px;
+        margin-left  : 10px;
+        width        : 100%;
+    }
+}
