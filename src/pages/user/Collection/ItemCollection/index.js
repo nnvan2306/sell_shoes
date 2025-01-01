@@ -126,6 +126,7 @@ function ItemCollection({ product, handleToCart }) {
             <div className={cx("section-info")}>
                 <h3 className={cx("product-name")}>
                     <a
+                        className={cx("product-link")}
                         style={{ cursor: "pointer" }}
                         onClick={() =>
                             (window.location.href = `/product/${product._id}`)
