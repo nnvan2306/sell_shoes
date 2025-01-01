@@ -1,17 +1,14 @@
 import styles from "./style.module.scss";
 import classNames from "classnames/bind";
 import React, { useEffect, useState } from "react";
-import { BiSearch, BiTrash } from "react-icons/bi";
+import { BiTrash } from "react-icons/bi";
 import { MdAdd } from "react-icons/md";
-import { Link } from "react-router-dom";
-import Select from "react-select";
 import { CustomeButton, Modal } from "~/components";
 import { getFaqs } from "./api/get-faq";
 import { BsEye } from "react-icons/bs";
 import { AiOutlineEdit } from "react-icons/ai";
 import ModelFaq from "./ModelFaq";
 
-//  const typeModelFaq = "EDIT" | "CREATE" | "VIEW";
 const cx = classNames.bind(styles);
 
 const FaqPage = () => {

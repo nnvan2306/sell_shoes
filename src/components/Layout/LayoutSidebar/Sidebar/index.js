@@ -3,10 +3,10 @@ import { Link, useNavigate } from "react-router-dom";
 import styles from "./Sidebar.module.scss";
 import classNames from "classnames/bind";
 import {
-    AiOutlineApartment,
     AiOutlineHome,
     AiOutlineHistory,
     AiOutlineTags,
+    AiOutlineQuestion,
 } from "react-icons/ai";
 import { PiShirtFolded } from "react-icons/pi";
 import { MdOutlineAnalytics, MdOutlineRateReview } from "react-icons/md";
@@ -199,7 +199,7 @@ function Sidebar() {
                             handleClickItem("Faq");
                         }}
                     >
-                        <AiOutlineHistory className={cx("sidebar-icon")} />
+                        <AiOutlineQuestion className={cx("sidebar-icon")} />
                         <div>FAQ</div>
                     </Link>
                 </div>

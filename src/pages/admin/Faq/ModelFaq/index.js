@@ -5,7 +5,6 @@ import { CustomeButton } from "~/components";
 import { MdAdd } from "react-icons/md";
 import { updateFaq } from "../api/update-faq";
 import { createFaq } from "../api/create-faq";
-
 import { ToastContainer, toast } from "react-toastify";
 import { deleteFaq } from "../api/delete-faq";
 const cx = classNames.bind(styles);
